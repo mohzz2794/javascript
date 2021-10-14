@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		
+	</title>
+</head>
+<body>
+
+
+  <label for="fn">First Number:</label>
+  <input type="text" id="fn" name="fn"><br><br>
+  <label for="sn">Second Number:</label>
+  <input type="text" id="sn" name="sn"><br><br>
+  <label for="cars">Choose a car:</label>
+<select id="cars" name="cars">
+  <option value="plus">+</option>
+  <option value="minus">-</option>
+  <option value="div">/</option>
+  <option value="mul">*</option>
+</select>
+
+<a>Result : </a>
+  <input type="button"  onclick="myFunction()" value="Get Result">
+
+  <script type="text/javascript">
+  	
+  		function myFunction() {
+var firstNumber = document.getElementById("fn").value;
+var secondNumber = document.getElementById("sn").value;
+
+  alert(+firstNumber+ +secondNumber);
+ 
+
+
+}
+
+
+
+  </script>
+
+</body>
+</html>

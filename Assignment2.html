@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>JS Form Validation</title>
+<!-- Standard Setup Viewport/Encoding/BootstrapCDN -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<h1 style="text-align:center; color: teal">Basic Info Form</h1>
+<br>
+
+<fieldset>
+<form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+  Name: <input type="text" name="name" >
+  Phone/Mob: <input type="number" name="number" ><br><br>
+  Email: <input type="email" name="email" >
+  Password: <input type="password" name="password" ><br><br>
+</fieldset><br>
+  <input type="submit" value="Submit">
+</form>
+
+
+<script>
+function validateForm() {
+  var naming = document.forms["myForm"]["name"].value;
+  if(naming.length<3) {
+    alert("Name must be filled out & required at least 3 characters");
+    return false;
+  }
+  
+  var mailId = document.forms["myForm"]["email"].value;
+  if (mailId == "") {
+    alert("Valid mail as 'john@hotmail.com'");
+    return false;
+  }
+  
+var numr = document.forms["myForm"]["number"].value;
+if(numr.length<10){
+  alert("Enter valid 10 digit number");
+    return false;
+    }
+
+var pass = document.forms["myForm"]["password"].value;
+if(pass.length<6){
+  alert("Password at least 6 characters");
+    return false;
+    }
+}
+</script>
+</body>
+</html>

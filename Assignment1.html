@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS Calculator</title>
+<!-- Standard Setup Viewport/Encoding/BootstrapCDN -->
+	  <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+	.Style{
+	background-color: yellow;
+    margin-left: 20%;
+    margin-right: 30%;
+    padding-left: 12%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+	}
+</style>
+
+</head>
+
+<body>
+
+	<div class="Style">
+
+	<h1>Calculator</h1>
+
+	<!-- Form -->
+
+<label for="fn">First Number:</label>
+  <input type="text" id="fn" name="fn"><br><br>
+  <label for="sn">Second Number:</label>
+  <input type="text" id="sn" name="sn"><br><br>
+  <label for="cars">Choose Operator:</label>
+<select id="symbols" name="Symbols">
+  <option value="plus">+</option>
+  <option value="minus">-</option>
+  <option value="div">/</option>
+  <option value="mul">*</option>
+</select>
+
+
+	<!-- Button -->
+<a>Result : </a>
+<input type="button"  onclick="myFunction()" value="Get Result">
+
+
+	<!-- Function to run the operators -->
+  <script>
+	function myFunction() {
+	var firstNumber = document.getElementById("fn").value;
+	var secondNumber = document.getElementById("sn").value;
+	
+	var operation = document.getElementById("symbols").value;
+
+	switch(operation){
+	case "plus" :
+	var addition = +firstNumber + +secondNumber;
+	alert(addition);
+	break;
+
+	case "minus":
+	var substraction = +firstNumber - +secondNumber;
+	alert(substraction);
+	break;
+
+	case "div":
+	var division = +firstNumber / +secondNumber;
+	alert(division);
+	break;
+
+	case "mul":
+	var multiplication = +firstNumber * +secondNumber;
+	alert(multiplication);
+	break;
+	}
+
+	}
+  </script>
+
+</div>
+</body>
+</html>
